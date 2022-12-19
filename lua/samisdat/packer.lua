@@ -24,4 +24,10 @@ return require('packer').startup(function(use)
   
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
+  -- file explorer
+  use("nvim-tree/nvim-tree.lua")
+
+  -- vs-code like icons
+  use("nvim-tree/nvim-web-devicons")
+
 end)
