@@ -7,6 +7,12 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- dep of some(?) other plugins
+  use('nvim-lua/plenary.nvim')
+
+  -- colors
+  use("bluz71/vim-nightfly-guicolors")
+
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
   -- or                            , branch = '0.1.x',
