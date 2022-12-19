@@ -29,3 +29,7 @@ require("samisdat.plugins.treesitter")
 require("samisdat.plugins.gitsigns")
 
 require("samisdat.plugins.undotree")
+
+require("samisdat.plugins.harpoon")
+
+require("samisdat.plugins.lsp")
