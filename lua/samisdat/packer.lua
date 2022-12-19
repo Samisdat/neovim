@@ -13,6 +13,9 @@ return require('packer').startup(function(use)
   -- colors
   use("bluz71/vim-nightfly-guicolors")
 
+  -- statusline
+  use("nvim-lualine/lualine.nvim")
+
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
   -- or                            , branch = '0.1.x',
