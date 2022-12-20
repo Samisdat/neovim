@@ -10,7 +10,7 @@ require('samisdat.plugin.treesitter');
 require('samisdat.plugin.lsp');
 require('samisdat.plugin.cmp');
 
---require("samisdat.plugin.harpoon");
+require("samisdat.plugin.harpoon");
 require("samisdat.plugin.gitsign");
 require("samisdat.plugin.comment");
 require("samisdat.plugin.autopairs");
