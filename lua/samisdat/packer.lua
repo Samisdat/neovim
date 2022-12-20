@@ -39,6 +39,8 @@ return require('packer').startup(function(use)
   -- commenting with gc
   use("numToStr/Comment.nvim")
 
-
+  -- auto closing
+  use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
+  use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
 end)
