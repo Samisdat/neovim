@@ -1,6 +1,12 @@
+-- import telescope plugin safely
+local setup, telescope = pcall(require, "telescope")
+if not setup then
+  return
+end
+
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
-require('telescope').setup {
+telescope.setup {
 	defaults = {
 	  mappings = {
 		i = {
