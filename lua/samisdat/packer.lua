@@ -32,5 +32,6 @@ return require('packer').startup(function(use)
 
   -- pin files
   use('theprimeagen/harpoon')
-
+-- tmux & split window navigation
+use("christoomey/vim-tmux-navigator") 
 end)
