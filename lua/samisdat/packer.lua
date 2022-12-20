@@ -30,4 +30,7 @@ return require('packer').startup(function(use)
   -- vs-code like icons
   use("nvim-tree/nvim-web-devicons")
 
+  -- pin files
+  use('theprimeagen/harpoon')
+
 end)
