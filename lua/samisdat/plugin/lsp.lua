@@ -1,3 +1,9 @@
+-- Diagnostic keymaps
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
+
 -- LSP settings.
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
@@ -52,7 +58,10 @@ local on_attach = function(_, bufnr)
   
   -- Enable the following language servers
   -- Feel free to add/remove any LSPs that you want here. They will automatically be installed
-  local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'sumneko_lua', 'gopls' }
+  local servers = { 
+    'tsserver', 
+    'sumneko_lua', 
+  }
   
   -- Ensure the servers above are installed
   require('mason-lspconfig').setup {

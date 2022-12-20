@@ -11,6 +11,12 @@ require('packer').startup(function(use)
   -- Package manager
   use 'wbthomason/packer.nvim'
 
+  -- dep of some(?) other plugins
+  use('nvim-lua/plenary.nvim')
+  
+  -- colors
+  use("bluz71/vim-nightfly-guicolors")
+
   use { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     requires = {
@@ -46,6 +52,30 @@ require('packer').startup(function(use)
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
   
+  -- statusline
+  use("nvim-lualine/lualine.nvim")
+
+    -- file explorer
+    use("nvim-tree/nvim-tree.lua")
+
+    -- vs-code like icons
+    use("nvim-tree/nvim-web-devicons")
+  
+    -- pin files
+    use('theprimeagen/harpoon')
+  
+    -- tmux & split window navigation
+    use("christoomey/vim-tmux-navigator") 
+  
+    -- commenting with gc
+    use("numToStr/Comment.nvim")
+  
+    -- auto closing
+    use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
+    use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
+  
+    use ('lewis6991/gitsigns.nvim')  
+    
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
   if has_plugins then
@@ -137,18 +167,4 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
-require('samisdat.plugin.telescope');
-require('samisdat.plugin.treesitter');
-
-
--- Diagnostic keymaps
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
-
-
-require('samisdat.plugin.lsp');
-
-require('samisdat.plugin.cmp');
 
