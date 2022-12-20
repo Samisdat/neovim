@@ -1,11 +1,8 @@
-print("nvim-tree")
 -- import nvim-tree plugin safely
 local setup, nvimtree = pcall(require, "nvim-tree")
 if not setup then
   return
 end
-
-print("nvim-tree")
 
 -- recommended settings from nvim-tree documentation
 vim.g.loaded_netrw = 1
