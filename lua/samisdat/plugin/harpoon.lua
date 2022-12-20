@@ -1,11 +1,8 @@
-print("harpoon0")
 -- import harpoon plugin safely
 local status, mark = pcall(require, "harpoon.mark")
 if not status then
   return
 end
-
-print("harpoon1")
 
 local ui = require("harpoon.ui")
 
