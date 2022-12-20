@@ -32,6 +32,13 @@ return require('packer').startup(function(use)
 
   -- pin files
   use('theprimeagen/harpoon')
--- tmux & split window navigation
-use("christoomey/vim-tmux-navigator") 
+  
+  -- tmux & split window navigation
+  use("christoomey/vim-tmux-navigator") 
+
+  -- commenting with gc
+  use("numToStr/Comment.nvim")
+
+
+
 end)
