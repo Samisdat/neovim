@@ -8,6 +8,7 @@ require("samisdat.plugin.nvim-tree");
 require('samisdat.plugin.telescope');
 require('samisdat.plugin.treesitter');
 require('samisdat.plugin.lsp');
+require('samisdat.plugin.null-ls');
 require('samisdat.plugin.cmp');
 
 require("samisdat.plugin.harpoon");
