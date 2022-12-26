@@ -29,6 +29,20 @@ null_ls.setup({
   -- configure format on save
   on_attach = function(current_client, bufnr)
     if current_client.supports_method("textDocument/formatting") then
+
+      -- Create a command `:Format` local to the LSP buffer
+      vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
+        if vim.lsp.buf.format then
+          vim.lsp.buf.format({
+            filter = function(client)
+              --  only use null-ls for formatting instead of lsp server
+              return client.name == "null-ls"
+            end,
+            bufnr = bufnr,
+          })
+        end
+      end, { desc = 'Format current buffer with LSP' })
+
       vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
       vim.api.nvim_create_autocmd("BufWritePre", {
         group = augroup,
