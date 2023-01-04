@@ -159,6 +159,13 @@ _G.packer_plugins = {
     path = "/Users/samisdat/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-treesitter-context"] = {
+    load_after = {},
+    loaded = true,
+    needs_bufread = false,
+    path = "/Users/samisdat/.local/share/nvim/site/pack/packer/opt/nvim-treesitter-context",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
+  },
   ["nvim-treesitter-textobjects"] = {
     load_after = {},
     loaded = true,
@@ -222,6 +229,7 @@ time([[Conditional loading of telescope-fzf-native.nvim]], false)
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]
 vim.cmd [[ packadd nvim-ts-autotag ]]
+vim.cmd [[ packadd nvim-treesitter-context ]]
 vim.cmd [[ packadd nvim-treesitter-textobjects ]]
 time([[Sequenced loading]], false)
 
