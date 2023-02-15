@@ -1,7 +1,7 @@
 require("samisdat.set")
 require("samisdat.remap")
 require("samisdat.packer")
-require("samisdat.plugin.nightfly")
+require("samisdat.plugin.tokyonight")
 require("samisdat.plugin.lualine")
 require("samisdat.plugin.nvim-tree")
 

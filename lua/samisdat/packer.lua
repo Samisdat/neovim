@@ -13,9 +13,8 @@ require("packer").startup(function(use)
 
 	-- dep of some(?) other plugins
 	use("nvim-lua/plenary.nvim")
-
 	-- colors
-	use("bluz71/vim-nightfly-guicolors")
+	use("folke/tokyonight.nvim")
 
 	use({ -- LSP Configuration & Plugins
 		"neovim/nvim-lspconfig",
